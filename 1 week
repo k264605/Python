@@ -30,3 +30,35 @@ for f in fruit: # 1) 딸기" 라는 key 가 d 라는 딕셔너리에 들어있�
 print(d) #
 '''
 # 코드를 짜는 방법은 다양한 것 같고 아직 코드를 짜는 뇌구조를 갖추지 못한 것 같아요!
+
+# 클래스 = 빵틀, 오브젝트 = 빵 (비유)
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def say_hello(self,age2):
+        print("안녕! "+self.name+ "나는 ", self.name + age2+"살이야")
+
+    def introduce(self):
+        print("내 이름은 " + self.name + "그리고 나는 " + str(self.age)
+              + "살이야")
+'''
+#상속
+'''
+******* 중요 *******
+class Police(Person): # Police 와 Programmer 클래스를 만든다면 Police와
+                      # Programmer 가 하는 일은 다르지만 둘 다 Person이
+                      # 할 수 있는 일은 다 할 수 있어야 한다.
+    def arrest(self, to_arrest):
+        print("넌 체포됐다." + to_arrest)
+class Programmer(Person):
+    def program(self, to_program):
+        print("다음엔 뭘 만들지? 아 이걸 만들어야겠다." + to_program)
+        
+sh = Person("승현", 20)
+jenny = Police("제니",23)
+michael = Programmer("마이클",23)
+sh.introduce()
+jenny.arrest()
+'''
+# 2023/10/02
