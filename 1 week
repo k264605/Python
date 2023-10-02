@@ -1,1 +1,32 @@
+#fruit리스트에 과일들 개수 세기
+''' #내가 짠 코드
+fruit = ["사과", "사과", "바나나", "바나나", "딸기", "키위", "복숭아",
+         "복숭아", "복숭아"]
+num = {"apple":0, "banana":0, "strawberry":0, "kiwi": 0, "peach":0}
+for i in fruit:
+   if i =="사과":
+       num["apple"] = num["apple"]  + 1
+   elif i == "바나나":
+       num["bananan"] = num["banana"] + 1
+   elif i == "딸기":
+       num["strawberry"] = num["strawberry"] + 1
+   elif i == "키위":
+       num["kiwi"] = num["kiwi"] + 1
+   elif i == "복숭아":
+       num["peach"] = num["peach"] + 1
+print(num.values())
+'''
 
+'''
+fruit = ["사과", "사과", "바나나", "바나나", "딸기", "키위", "복숭아",
+         "복숭아", "복숭아"]
+d = {}
+for f in fruit: # 1) 딸기" 라는 key 가 d 라는 딕셔너리에 들어있어?
+    if f in d: #
+        d[f]= d[f] + 1
+    else:
+        d[f] = 1 # 2) 만약 "사과" 라는 애가 없으면 그걸 딕셔너리에 넣고 
+                 #    벨류는 1로 만들어줘
+print(d) #
+'''
+# 코드를 짜는 방법은 다양한 것 같고 아직 코드를 짜는 뇌구조를 갖추지 못한 것 같아요!
