@@ -190,6 +190,6 @@ a.append(x)
 a.append(y)
 a.sort()
 print(a[0])
-
+[2023/10/05]
 
 
