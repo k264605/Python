@@ -178,6 +178,18 @@ for k in range(a):
 # print(x[0])
 # print(x[1])
 
+#1085
+# 왼쪽사각형에서 오른쪽사각형까지의 최소 거리는 x의 왼쪽, 오른쪽 y의 위, 아래 중 최소를 구하면
+# 되는 문제 이기에 w-x, h-y, x, y 를 놓고 가장 작은 숫자를 출력.
+import sys
+x, y, w, h = map(int,sys.stdin.readline().split())
+a = []
+a.append(w-x)
+a.append(h-y)
+a.append(x)
+a.append(y)
+a.sort()
+print(a[0])
 
 
 
