@@ -140,6 +140,7 @@ for k in range(n):
 # lastName_and_FirstName('이천수','안정환','황선홍','박지성')
 #인수를 여러 개를 적어도 모두 적용이 된다.
 
+''' # 4101
 import sys
 x = []
 i = 0
@@ -154,7 +155,7 @@ while True:
     i += 1
 for t in range(i):
     print(x[t])
-
+'''
 
 
 
