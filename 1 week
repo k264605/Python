@@ -192,4 +192,10 @@ a.sort()
 print(a[0])
 [2023/10/05]
 
+# import sys
+# n, k = map(str,input().split())
+# A = list(map(str,input().split()))
+# print(A.count(str(k)))
+# # count를 사용하려면 count()안을 string으로 넣어야 한다. int형은 불가함
+
 
