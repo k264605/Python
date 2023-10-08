@@ -221,3 +221,9 @@ print(a[0])
 # 처음에는 time 리스트 안의 값을 다 더한 후에 30, 60으로 나눠서 값이 이상하게 나왔는데
 # 각각 따로 구해야하는 걸 나중에 알았다.
 
+# 10818
+# import sys
+# N = int(input())
+# num = list(map(int,sys.stdin.readline().split()))
+# print(min(num), max(num))
+
