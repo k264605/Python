@@ -227,3 +227,19 @@ print(a[0])
 # num = list(map(int,sys.stdin.readline().split()))
 # print(min(num), max(num))
 
+# 2525
+# import sys
+# present = list(map(int,sys.stdin.readline().split()))
+# time = int(input())
+# h = (present[1] + time) // 60 + present[0]
+# m = (present[1] + time) % 60
+# if (h >= 24):
+#     print(h - 24,m)
+# else:
+#     print(h, m)
+
+# 45줄에서 그냥 present[1] + time // 60 으로 몫만 구하고 47줄에서 if (present[0] == 23) 인
+# 상황에서 00시로 넘어가는 것만 생각했기에 present[1]의 값이 커서 22시,21시 등에서 00시 넘어가는
+# 상황을 고려하지 못해서 초반에 틀렸었다.
+
+
