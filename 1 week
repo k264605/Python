@@ -326,3 +326,12 @@ for i in range(t):
             fin.append(9)
 for p in range(t):
     print(fin[p], end="\n")
+
+#12865
+import sys
+N, K = map(int, sys.stdin.readline().split())
+sum = 0
+for i in range(N):
+    N2, K2 = map(int, sys.stdin.readline().split())
+
+
