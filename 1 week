@@ -199,3 +199,25 @@ print(a[0])
 # # count를 사용하려면 count()안을 string으로 넣어야 한다. int형은 불가함
 
 
+# import sys
+# num = int(input())
+# time = list(map(int,sys.stdin.readline().split()))
+# a = []
+# b = []
+# A = 0
+# B = 0
+# for i in range(len(time)):
+#     a.append((time[i]//30 + 1)*10)
+#     b.append((time[i]//60 + 1)*15)
+# for t in range(len(time)):
+#     A += a[t]
+#     B += b[t]
+# if A>B:
+#     print("M",B)
+# elif A < B:
+#     print("Y",A)
+# else:
+#     print("Y M",A)
+# 처음에는 time 리스트 안의 값을 다 더한 후에 30, 60으로 나눠서 값이 이상하게 나왔는데
+# 각각 따로 구해야하는 걸 나중에 알았다.
+
