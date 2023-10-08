@@ -242,4 +242,81 @@ print(a[0])
 # 상황에서 00시로 넘어가는 것만 생각했기에 present[1]의 값이 커서 22시,21시 등에서 00시 넘어가는
 # 상황을 고려하지 못해서 초반에 틀렸었다.
 
+# 1009
+import sys
+# 1/ 111111
+# 2/ 2 4 6 8
+# 3/ 3 9 7 1
+# 4/ 4 6
+# 5/ 5
+# 6/ 6
+# 7/ 7 9 3 1
+# 8/ 8 4 2 6
+# 9/ 9 1
+t = int(input())
+fin = []
+for i in range(t):
+    a, b = map(int,sys.stdin.readline().split())
+    if (a % 10) ==0:
+        
+    elif (a % 10)==1:
+        fin.append(1)
+    elif(a % 10) == 2:
+        c = b % 4
+        if c == 0:
+            fin.append(2)
+        elif c==1:
+            fin.append(4)
+        elif c==2:
+            fin.append(6)
+        else:
+            fin.append(8)
+    elif(a%10)==3:
+        d = b % 4
+        if d==1:
+            fin.append(3)
+        elif d==2:
+            fin.append(9)
+        elif d==3:
+            fin.append(7)
+        elif d==0:
+            fin.append(1)
+    elif (a % 10) == 4:
+        f = b % 2
+        if f == 0:
+            fin.append(6)
+        elif f == 1:
+            fin.append(4)
+    elif (a%10)==5:
+        fin.append(5)
+    elif (a%10)==6:
+        fin.append(6)
+    elif (a % 10) == 7:
+        e = b % 4
+        if e == 0:
+            fin.append(1)
+        elif e == 1:
+            fin.append(9)
+        elif e == 2:
+            fin.append(3)
+        else:
+            fin.append(7)
+    elif (a % 10) == 8:
+        g = b % 4
+        if g == 0:
+            fin.append(6)
+        elif g == 1:
+            fin.append(4)
+        elif g == 2:
+            fin.append(2)
+        else:
+            fin.append(8)
+    elif (a % 10) == 9:
+        h = b % 2
+        if h == 0:
+            fin.append(1)
+        elif h == 1:
+            fin.append(9)
+for p in range(t):
+    print(fin[p], end="\n")
 
