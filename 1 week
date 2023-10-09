@@ -351,6 +351,21 @@ for i in range(N):
 # 다른 방식으로 했어야 했다.
 # 2023/10/09(Mon)
 
-
+# n, m = map(int,input().split())
+# A = list(map(int, input().split()))
+# B = []
+# C = []
+#
+# for i in range(m):
+#     b = int(input())
+#     B.append(b)
+# for i in range(m):
+#     cnt = 0
+#     for j in range(n):
+#         if (A[j]>B[i]):
+#             cnt = cnt + 1
+#     C.append(cnt)
+# for i in range(m):
+#     print(C[i])
 
 
