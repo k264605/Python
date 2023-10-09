@@ -334,4 +334,23 @@ sum = 0
 for i in range(N):
     N2, K2 = map(int, sys.stdin.readline().split())
 
+# 2839 , 그리드 알고리즘 
+# N = int(input())
+# count = 0
+# while N >= 0:
+#     if N % 5 == 0:
+#         count = count + N // 5
+#         print(count)
+#         break
+#     N = N - 3
+#     count = count + 1
+# else:
+#     print(-1)
+# 처음, 그리디 문제 중 거스름돈 문제를 생각 하고 5로 걸러지지 않은 걸 3으로 쳐서 계산했지만, 동전 문제는 500원, 
+# 100원, 50원, 10원으로 결국 0이 된다지만 여기서는 5로 거르고 3으로 거른다고 0이 된다는 보장이 없었기에
+# 다른 방식으로 했어야 했다.
+# 2023/10/09(Mon)
+
+
+
 
