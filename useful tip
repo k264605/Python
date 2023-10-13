@@ -119,5 +119,159 @@ print(array)
 # 사전 자료형과 집합 자료형은 순서가 없기 때문에 인덱싱으로 값을 얻을 수 없다.
 # 사전의 키 혹은 집합의 원소를 이용해 O(1)의 시간 복잡도를 조회 가능
 
-# 2023/10/13 (금)
+# // 기본 입출력 //
+# 모든 프로그램은 적절한 (약속된) 입출력 양식을 가지고 있다.
+# 프로그램 동작의 첫 번째 단계는 데이터를 입력 받거나 생성하는 것이다.
 
+# // 조건문 //
+# 조건문은 프로그램의 흐름을 제어하는 문법입니다.
+# 들여쓰기: 탭을 사용하는 쪽과 공백 문자를 여러 번 사용하는 쪽으로 두 진영이 존재
+# 파이썬 스타일 가이드라인에서는 4개의 공백 문자를 사용하는 것을 표준으로 설정하고 있다.(인지해두자)
+
+# // 파이썬의 pass 키워드
+# 아무것도 처리하고 싶지 않을 때 pass 키워드를 사용한다.
+
+# score = 85
+# if score >= 80:
+#     pass    # 나중에 작성할 소스코드
+# else:
+#     print('성적이 80점 미만입니다.')
+# print('프로그램을 종료합니다.')
+
+# // 조건문의 간소화 //
+# 굳이 줄바꿈을 하지 않고도 간략하게 표현가능
+# score = 85
+# if score >= 80: result = "Success"
+# else: result = "Fail"
+# print(result)
+#
+# score = 85
+# result = "Success" if score >= 80 else "Fail"
+# print(result)
+
+# // 파이썬 조건문 내에서의 부등식 //
+# 다른 프로그래밍 언어와 다르게 파이썬은 조건문 안에서 수학의 부등식을 그대로 사용가능
+# Ex) x>0 and x<20 과 0 < x < 20 은 같은 결과를 반환
+
+# 반복문에서의 무한 루프
+# 무한 루프란 끊임없이 반복되는 반복 구문을 의미한다.
+# - 반복문을 작성한 뒤에는 항상 반복문을 탈출할 수 있는지 확인한다.
+
+# // 파이썬의 continue 키워드 //
+# 반복문에서 남은 코드의 실행을 건너뛰고, 다음 반복을 진행하고자 할 때 continue 를 사용
+# 1부터 9까지의 홀수의 합을 구할 때
+# result = 0
+# for i in range(1,10):
+#     if i % 2 == 0:
+#         continue
+#     result += i
+# print(result)
+
+# // global 키워드
+# global 키워드로 변수를 지정하면 해당 함수에서는 지역 변수를 만들지 않고, 함수 바깥에 선언된 변수를
+# 바로 참조하게 된다.
+# a = 0
+# def func():
+#     global a
+#     a += 1
+# for i in range(10):
+#     func()
+# print(a)
+
+# array = [1, 2, 3, 4, 5]
+# def func():
+#     array = [3,4,5]
+#     array.append(6)
+#     print(array)
+# func()
+# print(array)    # 변수 이름이 같고 함수를 선언한다면 지역변수를 우선순위로 한다.
+
+# // 여러 개의 반환 값 //
+# def operator(a, b):
+#     add_var = a + b
+#     subtract_var = a - b
+#     multiply_var = a * b
+#     divide_var = a / b
+#     return add_var, subtract_var, multiply_var, divide_var
+# a, b, c, d = operator(7,3)
+# print(a, b, c, d)
+
+# // 람다(이름없는 함수) 표현식 //
+# def add(a, b):
+#     return a + b
+# print(add(3, 7))    # 일반적인 메서드 사용
+# print((lambda a, b: a + b)(3, 7))   #람다 표현식으로 구현한 add() 메서드
+
+# // 람다 표현식 예시: 내장 함수에서 자주 사용되는 람다 함수 //
+# array = [('홍길동', 50), ('이순신',32),('아무개',74)]
+# def my_key(x):  # 원소가 있을 때, 튜플이 있을 때
+#     return x[1] # 두 번째 원소를 기준으로 한다.
+# print(sorted(array, key=my_key))
+# print(sorted(array, key = lambda x: x[1]))
+
+# // 람다 표현식 예시: 여러 개의 리스트에 적용 //
+# list1 = [1,2,3,4,5]
+# list2 = [6, 7, 8, 9, 10]
+# result = map(lambda a, b: a + b, list1, list2)
+# print(list(result))
+
+# 실전에서 유용한 표준 라이브러리
+# 내장함수: 기본 입출력 함수부터 정렬 함수까지 기본적인 함수들을 제공
+# itertools: 파이썬에서 반복되는 형태의 데이터를 처리하기 위한 유용한 기능들을 제공
+# - 특히 순열과 조합 라이브러리는 코딩 테스트에서 자주 사용됨
+# heapqa: 힙 자료구조를 제공
+# bisect: 이진 탐색 기능 제공
+# collections: 덱(deque), 카운터(Counter) 등의 유용한 자료구조를 포함
+# math: 필수적인 수학적 기능을 제공
+# - 팩토리얼, 제곱근, 최대공약수(GCD), 삼각함수 관련 함수부터 파이와 같은 상수를 포함
+
+# result = sum([1,2,3,4,5])
+# print(result)
+# min_result = min(7, 3, 5, 2)
+# max_result = max(7, 3, 5, 2)
+# print(min_result,max_result)
+# result = eval("(3+5)*7")    # 수식으로 표현된 하나의 식을 계산한 결과를 반환
+# print(result)
+
+# result = sorted([9, 1, 8, 5, 4])
+# reverse_result = sorted([9, 1, 8, 5, 4], reverse=True)  # 반대로 정렬
+# print(result)
+# print(reverse_result)
+# array = [('홍길동',35),('이순신',75),('아무개',50)]
+# result = sorted(array, key = lambda x: x[1],reverse=True)
+# print(result)
+
+# // 순열과 조합 //
+# 순열: 서로 다른 n개에서 서로 다른 r개를 선택하여 일렬로 나열하는 것
+# {'A', 'B', 'C'} 에서 세 개를 선택하여 나열하는 경우: ABC, ACB, BAC, BCA, CAB, CBA
+# 조합: 서로 다른 n개에서 순서에 상관 없이 서로 다른 r개를 선택하는 것
+# {'A', 'B', 'C'}에서 순서를 고려하지 않고 두 개를 뽑는 경우: AB, AC, BC
+# 순열의 수 n P r, 조합의 수 n C r
+
+# from itertools import permutations
+# data = ['A', 'B', 'C']
+# result = list(permutations(data,3)) # 모든 순열 구하기
+# print(result)
+#
+# from itertools import combinations
+# result = list(combinations(data, 2))    # 조합
+# print(result)
+#
+# from itertools import product
+# result= list(product(data, repeat=2))   # 2개를 뽑는 모든 순열 구하기(중복허용)
+# print(result)
+#
+# from itertools import combinations_with_replacement
+# result = list(combinations_with_replacement(data, 2))   # 2개를 뽑는 모든 조합 구하기(중복허용)
+# print(result)
+
+# // Counter //
+# 파이썬 collections 라이브러리의 Counter 는 등장 횟수를 세는 기능을 제공
+# 리스트와 같은 반복 가능한 객체가 주어졌을 때 내부의 원소가 몇 번씩 등장했는지 알려줌
+# from collections import Counter
+# counter = Counter(['red','blue','red','green','blue','blue'])
+# print(counter['blue'])
+# print(counter['green'])
+# print(dict(counter))
+
+# 2023 / 10 / 13
