@@ -1,0 +1,15 @@
+
+# 1931
+# import sys
+# N = int(sys.stdin.readline().strip())  # 회의의 수 N개
+# meeting = [list(map(int,sys.stdin.readline().split())) for _ in range(N)]   # N개의 회의의 시간
+# meeting.sort(key = lambda x: x[0])
+# meeting.sort(key = lambda x: x[1])
+# print(meeting)
+# cnt = 1
+# end = meeting[0][1]
+# for i in range(1,N):
+#     if meeting[i][0] >= end:
+#         cnt += 1
+#         end = meeting[i][1]
+# print(cnt)
