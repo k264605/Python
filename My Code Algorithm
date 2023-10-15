@@ -1,3 +1,5 @@
-print("hello world")
+N = int(input())
+A = [list(map(int,input().split())) for _ in range(N)]
+# 한 줄에 입력한 값으로 리스트 N개가 형성되고 그 리스트들이 다시 리스트를 이룬다.
 
 
