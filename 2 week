@@ -1,0 +1,16 @@
+
+# 11047
+#첫 줄에 N과 K가 주어진다.
+# N, K = map(int, input().split())
+# A = list(int(input()) for _ in range(N))    # N개의 줄에 동전의 가치 A가 오름차순으로 주어진다.
+# count = 0   # 개수 최솟값을 세기 위한 초기화
+# A.reverse() # 큰 수부터 빼줘야 하기 때문에 리버스
+# for i in A:
+#     count = count + K // i
+#     K = K % i
+# print(count)
+
+# 1931
+N = int(input())    # 회의의 수 N개
+meeting = [list(map(int,input().split())) for _ in range(N)]    # N개의 회의의 시간
+
