@@ -1,0 +1,12 @@
+import sys
+N = int(sys.stdin.readline())
+k = []
+for i in range(N):
+    a = int(sys.stdin.readline())
+    k.append(a)
+k.sort()
+answers = []
+for i in k:
+     answers.append(i*N)
+     N -= 1
+print(max(answers))
