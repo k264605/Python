@@ -1,0 +1,11 @@
+# 11399
+import sys
+N = int(sys.stdin.readline())
+sum = 0
+real_sum = 0
+P = list(map(int,sys.stdin.readline().split()))
+P.sort()
+for i in range(N):
+    sum = sum + P[i]
+    real_sum = real_sum + sum
+print(real_sum)
