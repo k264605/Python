@@ -1,0 +1,23 @@
+# 방법 1
+import sys
+N = int(sys.stdin.readline())
+S = list(int(input()) for _ in range(N))
+count = 0
+S.reverse()
+S.append(0)
+for i in range(N):
+    while S[i] <= S[i+1]:
+        S[i+1] -= 1
+        count += 1
+print(count)
+
+# 방법 2
+import sys
+N = int(sys.stdin.readline())
+S = list(int(input()) for _ in range(N))
+count = 0
+for i in range(N-1,0,-1):
+    if S[i] <= S[i-1]:
+        count += 1 + S[i-1] - S[i]
+        S[i-1] = S[i] - 1
+print(count)
