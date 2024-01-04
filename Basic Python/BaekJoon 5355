@@ -1,0 +1,16 @@
+T = int(input())
+result = 0
+for i in range(T):
+    case = list(map(str, input().split()))
+    result = 0
+    for j in range(len(case)):
+        if j == 0:
+            result = result + float(case[j])
+        else:
+            if case[j] == '@':
+                result *= 3
+            elif case[j] == '%':
+                result += 5
+            elif case[j] == '#':
+                result -= 7
+    print(f'{result:.2f}')
