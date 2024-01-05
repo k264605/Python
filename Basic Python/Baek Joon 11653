@@ -1,0 +1,8 @@
+N = int(input())
+t = 2
+while N != 1:
+    if (N%t)==0:
+        print(t)
+        N = N/t
+    else:
+        t += 1
