@@ -1,0 +1,8 @@
+S = int(input())
+t = 1
+total = 0
+while total < S:
+    total += t
+    if total <= S:
+        t += 1
+print(t-1)
