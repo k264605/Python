@@ -1,0 +1,11 @@
+a = []
+total = 0
+for i in range(5):
+    score = int(input())
+    a.append(score)
+for j in range(5):
+    if a[j] < 40:
+        a[j] = 40
+for t in range(5):
+    total += a[t]
+print(total//5)
