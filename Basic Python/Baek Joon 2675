@@ -1,0 +1,8 @@
+T = int(input())
+for _ in range(T):
+    cnt, word = map(str, input().split())
+    cnt = int(cnt)
+    word = list(word)
+    for i in range(len(word)):
+        print(cnt * word[i], end="")
+    print('')
