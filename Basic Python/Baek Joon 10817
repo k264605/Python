@@ -1,0 +1,4 @@
+A, B, C = map(int, input().split())
+num = [A, B, C]
+num = sorted(num)
+print(num[1])
