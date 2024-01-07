@@ -1,0 +1,6 @@
+k, n, m = map(int, input().split())
+total = k * n
+if total <= m:
+    print(0)
+else:
+    print(total - m)
