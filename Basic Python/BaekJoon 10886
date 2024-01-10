@@ -1,0 +1,13 @@
+N = int(input())
+Jun = 0
+Young = 0
+for i in range(N):
+    x = int(input())
+    if x == 0:
+       Young += 1
+    elif x == 1:
+        Jun += 1
+if Young > Jun:
+    print('Junhee is not cute!')
+else:
+    print('Junhee is cute!')
