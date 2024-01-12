@@ -1,0 +1,10 @@
+T = int(input())
+for i in range(T):
+    a = []
+    b = []
+    N = int(input())
+    for j in range(N):
+        x, y = map(str, input().split())
+        a.append(x)
+        b.append(int(y))
+    print(a[b.index(max(b))])
