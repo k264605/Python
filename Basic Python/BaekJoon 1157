@@ -1,0 +1,11 @@
+alphabet = (input()).upper()
+alphabet_list = list(set(alphabet))
+result = []
+
+for i in alphabet_list:
+    a = alphabet.count(i)
+    result.append(a)
+if result.count(max(result)) >= 2:
+    print("?")
+else:
+    print(alphabet_list[result.index(max(result))])
